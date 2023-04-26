@@ -8,9 +8,10 @@
 <body>
     <script>
         var cakeornocake = prompt("Do you want cake? (yes/no)");
-        if (cakeornocake === "yes") {
+        /*To do this more effectively, maybe use a dictionary, list or array*/
+        if (cakeornocake === "yes" || cakeornocake === "YES" || cakeornocake === "Yes" || cakeornocake === "yeah") {
             console.log("Okay! lets have some cake!");
-        } else if (cakeornocake === "no"){
+        } else if (cakeornocake === "no" || cakeornocake === "NO" || cakeornocake === "No" || cakeornocake === "nah"){
             console.log("Okay then! lets have pie!");
         } else {
             console.log("Only (yes/no) responses please!");
