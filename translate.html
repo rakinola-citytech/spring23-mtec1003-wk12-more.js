@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* Instructions on how to interact with Rosetta notStone */
+        alert("Hello! My name is Rosetta notStone");
+        alert("I can translate a few animal names in Spanish");
+
+        /* Create a dictionary of animals and their spanish translations */
+        var animalDict = new Map ([
+            ['cat', 'cat means Gato'],
+            ['frog', 'frog means Rana'],
+            ['puppy', 'puppy means Cachorro'],
+            ['kitten', "kitten means Gatito"],
+            ['dog', 'dog means Perro'],
+            ['mouse', 'mouse means Ratón'],
+            ['rat','rat means Rata'],
+            ['fish','fish means Peces'] 
+        ]);
+
+        /* Interface with user*/
+        var translate = prompt("What would you like to translate!");
+
+        /* Check the value of translate in the animalDict. 
+        If yes print print translate.
+        If no suggest an animal to translate */
+
+        if (animalDict.get(translate) !== undefined){
+            console.log(animalDict.get(translate));
+        } else if (animalDict.get(translate) === undefined){
+            alert("I'm sorry! I don't know " + translate);
+            alert("Would you like to know what kitten means instead!");
+            
+            /* Interacting with the user after 
+            their entry isn't defined animalDict */
+            var response = prompt("Answer (yes/no)");
+            if(response === "yes"){
+                console.log(animalDict.get('kitten'));
+            } else if(response === "no"){
+                console.log("Goodbye!");
+            } else{
+                alert("Only (yes/no) responses please!");
+                prompt("Answer (yes/no)");
+            }
+        }
+    </script>
+</body>
+</html>
