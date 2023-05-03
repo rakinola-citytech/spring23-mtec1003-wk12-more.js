@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* Instructions on how to interact with OddCalculator */
+        alert("Hello! My name is OddCalculator, I'm a calculator");
+
+        /* Interface with user*/
+        var firstnum = prompt("Give me a number");
+        var secondnum = prompt("Give me a number");
+        var operation = prompt("Give me an operator. NOTE: mul = multiplication, div = divide, or mod = module");
+        
+        /*Conditional statement to perform operation*/
+        if (operation === "mul"){
+            console.log(firstnum * secondnum);
+        } else if (operation === "div"){
+            console.log(firstnum / secondnum);
+        } else if(operation === "mod"){
+            console.log(firstnum % secondnum);
+        } else {
+            console.log("Sorry! Operator undefined");
+        }
+    </script>
+</body>
+</html>
